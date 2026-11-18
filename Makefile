@@ -1,6 +1,6 @@
 COMPOSE := docker compose -f deploy/docker-compose.yml
 
-.PHONY: help up down logs
+.PHONY: help up down reset logs
 
 help:
 	@echo "make up	- start all containers"
@@ -12,6 +12,9 @@ up:
 
 down:
 	$(COMPOSE) down
+
+reset:
+	$(COMPOSE) down -v
 
 logs:
 	$(COMPOSE) logs -f
