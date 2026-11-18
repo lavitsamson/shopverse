@@ -1,3 +1,5 @@
+-- One DB and one user per service
+
 CREATE USER catalog WITH PASSWORD 'catalog';
 CREATE DATABASE catalog OWNER catalog;
 REVOKE CONNECT ON DATABASE catalog FROM PUBLIC;
